@@ -1,0 +1,119 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* :root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+} */
+
+body {
+  background-color: #f4f5fa;
+}
+
+.navbar-class {
+  @apply md:fixed right-0 top-0 duration-300 ease-out bg-[#f4f5fa] z-10 max-md:ml-12 max-md:my-2;
+}
+
+.scrolled {
+  @apply bg-white z-10 rounded-b-lg
+}
+
+.c-flex {
+  @apply flex justify-center items-center;
+}
+
+.input-class {
+  @apply bg-transparent p-4 max-md:p-2 md:p-3 outline-none border-none max-md:hidden;
+}
+
+.focus-class {
+  @apply w-[80vw] max-lg:w-[60vw];
+}
+
+.none {
+  @apply hidden;
+}
+
+.item-class {
+  @apply flex items-center justify-between gap-2 h-12 cursor-pointer hover:bg-[#e6e7e8] pl-6 my-2 duration-300  hover:rounded-r-[30px] text-[#69656F];
+}
+
+.item-class.active {
+  @apply bg-[#e6ebeb] rounded-r-[30px];
+}
+
+.children-class {
+  @apply hover:bg-[green] text-xs;
+}
+
+.sidebar {
+  @apply lg:w-[7%] max-md:hidden fixed top-0 left-0 overflow-hidden h-[100vh] pt-2 cursor-pointer duration-300;
+}
+
+.sidebar-hover {
+  @apply lg:w-[18%]  fixed top-0 left-0 overflow-auto h-[100vh] bg-[#f4f5fa] z-50;
+}
+
+.sidebar-checked {
+  @apply lg:w-[18%]  fixed top-0 left-0 overflow-auto h-[100vh] bg-[#f4f5fa] z-10;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+.sidebar-checked.hovered::-webkit-scrollbar,
+.sidebar-hover::-webkit-scrollbar {
+  width: 4px;
+}
+
+.sidebar-checked.hovered::-webkit-scrollbar-track,
+.sidebar-hover::-webkit-scrollbar-track {
+  background: inherit;
+  border-radius: 5px;
+}
+
+.sidebar-checked.hovered::-webkit-scrollbar-thumb,
+.sidebar-hover::-webkit-scrollbar-thumb {
+  background: #69656f;
+  border-radius: 5px;
+}
+
+.sidebar-checked.hide::-webkit-scrollbar {
+  display: none;
+}
+
+.home-class {
+  @apply md:absolute top-20 right-0 bottom-10 overflow-auto  h-[100vh] duration-300 ease-out max-md:w-[95%] max-md:mx-auto max-sm:text-sm;
+}
+
+.card {
+  @apply bg-white shadow-[0_0.375rem_1rem_0_rgba(58,53,65,.12)] p-4 rounded-lg;
+}
+
+* > th {
+  @apply py-2 px-4 text-xs text-[#69656F];
+}
+* > td {
+  @apply py-2 px-4;
+}
